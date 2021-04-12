@@ -1,4 +1,6 @@
-/* General Styles */
+/* =================
+   General Styles
+================= */
 body {
    box-sizing: border-box;
    font-family: 'Ubuntu', sans-serif;
@@ -12,7 +14,15 @@ img {
    display: block;
 }
 
-/* Layout Styles */
+.image-full {
+   max-height: 350px;
+   min-width: 100%;
+   object-fit: cover;
+}
+
+/* =================
+    Typography
+================= */
 h1,
 h2,
 h3 {
@@ -24,6 +34,10 @@ h3 {
 h1 {
    font-size: 2rem;
    margin: 0;
+}
+
+h3 {
+   color: #1792d2;
 }
 
 a {
@@ -46,7 +60,71 @@ strong {
    margin: 0;
 }
 
-/* Article styles */
+/* =================
+   Layout styles
+================= */
+header {
+   background: #f8f8f8;
+   margin-bottom: 3em;
+   padding: 2em 0;
+   position: fixed;
+   text-align: center;
+   width: 100vw;
+}
+
+.top {
+   padding-top: 18rem;
+}
+
+.container {
+   width: 90%;
+   max-width: 1024px;
+   margin: 0 auto; /* Centering elements horizontally*/
+}
+
+.container-flex {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+/* =================
+Navigation styles
+================= */
+nav ul {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   list-style-type: none;
+   margin: 0 auto;
+   padding: 0;
+}
+
+nav li {
+   margin-left: 2em;
+   margin-top: 1em;
+}
+
+nav a {
+   color: #707070;
+   font-weight: 700;
+   padding: 0.25em 0;
+   text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+   border-bottom: 3px solid #1792d2;
+   color: #1792d2;
+}
+
+.current-page {
+   border-bottom: 3px solid #707070;
+}
+
+/* =================
+   Article styles
+================= */
 .article-title {
    font-size: 1.5rem;
 }
@@ -97,106 +175,14 @@ strong {
    order: 1;
 }
 
-@media screen and (min-width: 768px) {
-   .article-featured {
-      display: flex;
-      flex-direction: column;
-   }
-   .article-img {
-      min-height: 250px;
-      object-fit: cover;
-      order: 0;
-      width: 100%;
-   }
-
-   .article-title {
-      margin-top: 0;
-      order: 3;
-   }
-
-   .article.info {
-      order: 2;
-   }
-
-   .article-body {
-      order: 4;
-   }
-
-   .article-read-more {
-      order: 5;
-   }
-
-   .article-recent {
-      flex-direction: row;
-      justify-content: space-between;
-   }
-
-   .article-recent-main {
-      width: 67%;
-   }
-
-   .article-recent-secondary {
-      width: 30%;
-   }
-}
-
-/* Layout Styles */
-header {
-   background: #f8f8f8;
-   margin-bottom: 3em;
-   padding: 2em 0;
-   position: fixed;
-   text-align: center;
-   width: 100vw;
-}
-
-.top {
-   padding-top: 22rem;
-}
-
-.container {
-   width: 90%;
-   max-width: 1024px;
-   margin: 0 auto; /* Centering elements horizontally*/
-}
-
-.container-flex {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-}
-
-/* Navigation Styles */
-nav ul {
-   display: flex;
-   justify-content: center;
-   list-style-type: none;
-   padding: 0;
-}
-
-nav li {
-   margin-left: 2em;
-}
-
-nav a {
-   color: #707070;
-   font-weight: 700;
-   padding: 0.25em 0;
-   text-decoration: none;
-}
-
-nav a:hover,
-nav a:focus {
-   border-bottom: 3px solid #1792d2;
-   color: #1792d2;
-}
-
 /* Main content styles */
 .article-info {
    color: #707070;
 }
 
-/* Sidebar Styles */
+/* =================
+   Sidebar styles
+================= */
 .widget-title {
    color: #143774;
    font-size: 1.225rem;
@@ -210,38 +196,6 @@ nav a:focus {
    font-size: 1.225rem;
    font-weight: 400;
 }
-
-@media screen and (max-width: 768px) {
-   nav ul {
-      flex-direction: column;
-   }
-
-   nav li {
-      margin: 0.5em 0;
-   }
-}
-
-@media screen and (min-width: 768px) {
-   .container-flex {
-      flex-direction: row;
-   }
-
-   .top {
-      padding-top: 13rem;
-   }
-
-   main {
-      width: 75%;
-   }
-
-   aside {
-      width: 20%;
-      margin-left: 1em;
-      min-width: 200px;
-   }
-}
-
-/* widgets */
 
 .sidebar-widget {
    border: 20px solid #ebebeb;
@@ -282,7 +236,9 @@ nav a:focus {
    order: 2;
 }
 
-/* Footer styles */
+/* =================
+   Footer styles
+================= */
 footer {
    background-color: #143774;
    color: #ebebeb;
@@ -299,9 +255,78 @@ footer > p:last-child {
    margin-bottom: 0;
 }
 
-/* About Styles */
-.image-full {
-   max-height: 400px;
-   min-width: 100%;
-   object-fit: cover;
+/* =================
+ Responsive styles
+================= */
+@media screen and (min-width: 785px) {
+   .container-flex {
+      flex-direction: row;
+   }
+
+   .top {
+      padding-top: 13rem;
+   }
+
+   header {
+      text-align: left;
+   }
+
+   main {
+      width: 75%;
+   }
+
+   aside {
+      width: 20%;
+      margin-left: 1em;
+      min-width: 200px;
+   }
+
+   nav ul {
+      flex-direction: row;
+   }
+
+   nav li {
+      margin: 0.5em 0 0 3em;
+   }
+
+   .article-featured {
+      display: flex;
+      flex-direction: column;
+   }
+   .article-img {
+      min-height: 250px;
+      object-fit: cover;
+      order: 0;
+      width: 100%;
+   }
+
+   .article-title {
+      margin-top: 0;
+      order: 3;
+   }
+
+   .article.info {
+      order: 2;
+   }
+
+   .article-body {
+      order: 4;
+   }
+
+   .article-read-more {
+      order: 5;
+   }
+
+   .article-recent {
+      flex-direction: row;
+      justify-content: space-between;
+   }
+
+   .article-recent-main {
+      width: 67%;
+   }
+
+   .article-recent-secondary {
+      width: 30%;
+   }
 }
