@@ -226,6 +226,8 @@ nav a:focus {
 
    aside {
       width: 20%;
+      margin-left: 1em;
+      min-width: 200px;
    }
 }
 
